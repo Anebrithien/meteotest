@@ -80,8 +80,8 @@ public class GridDataTest {
     if (args != null && args.length == 1 && args[0].startsWith("-Dfile=")) {
       filename = args[0].replace("-Dfile=", "");
     } else {
-      System.err.println("don't know what text file to read, exit!");
-      System.exit(-1);
+      System.out.println("can't get filename from args, back to default file");
+      filename = "data/some_strange_grid.txt";
     }
     System.out.println("try to read " + filename);
     GridData gridData = readFromTextFile(filename);
